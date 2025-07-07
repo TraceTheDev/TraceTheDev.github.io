@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>About | Trace Davis</title>
+  
+    <!-- Load base and page-specific stylesheets -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/about.css">
+  </head>  
+
+<body>
+  <!-- Page wrapper for flex layout and page height -->
+  <div class="wrapper">
+
+    <!-- === Header Section === -->
+    <header class="site-header">
+      <div class="header-container">
+
+        <!-- Logo (clickable, returns to home page) -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="../resources/NewTLogo.png" alt="Logo">
+          </a>
+        </div>
+
+        <!-- Navigation menu and hamburger for mobile -->
+        <nav class="navbar">
+
+          <!-- Hamburger toggle icon (shown on mobile only) -->
+          <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+
+          <!-- Navigation links -->
+          <ul class="site-nav">
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- === Main Content Section === -->
+    <main>
+      <div class="page-container">
+      <section>
+        <h2>About Me</h2>
+
+        <!-- Introduction Section -->
+        <h3>Introduction</h3>
+        <p>
+          I'm a developer passionate about building thoughtful, 
+          user-focused software that blends solid engineering 
+          with purposeful design. I thrive at the intersection 
+          of creativity and logic, where usability meets performance. 
+          Whether it's creating responsive Java-based applications or 
+          implementing clean, accessible interfaces, I enjoy turning 
+          ideas into functional, well-structured code.
+        </p>
+
+        <!-- Background & Skills Section -->
+        <h3>Background & Technical Skills</h3>
+        <p>
+          I hold a Bachelor of Science in Computer Science from the 
+          University of North Florida and previously served as a team 
+          leader in the U.S. Army, where I developed a strong foundation 
+          in leadership and discipline. My experience ranges from building 
+          full-stack web systems and database apps to developing custom 
+          algorithms and compilers. I'm proficient in Java, CSS, HTTP, and 
+          MIPS, and familiar with Python, JavaScript, C, C++, SQL, MySQL, 
+          Git, and GitHub. I’m constantly learning and refining my skills 
+          to grow as both a developer and problem-solver.
+        </p>
+
+        <!-- Personal Traits and Interests -->
+        <h3>Work Style & Interests</h3>
+        <p>  
+          When I’m not coding, you’ll usually find me working on my project 
+          car, gaming with friends, or exploring new technologies to stay 
+          sharp and inspired in the ever-evolving tech world. I work well in 
+          any environment, whether independently or as part of a team, and 
+          I’m comfortable in both Agile and more traditional, structured 
+          development workflows. I genuinely enjoy the process of debugging 
+          and solving complex issues. I'm driven by a desire to create 
+          meaningful tools that improve everyday life, and I’m actively 
+          looking for my next opportunity to grow and contribute as a 
+          developer.
+        </p>
+      </section>
+    </div>
+    </main>
+
+    <!-- === Footer Section === -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <!-- Contact/social links -->
+        <p>
+          <a href="mailto:trace.davis27@gmail.com">Email</a> |
+          <a href="https://www.linkedin.com/in/trace-d-926380138/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+          <a href="https://github.com/TraceTheDev" target="_blank" rel="noopener noreferrer">GitHub</a> |
+          <a href="https://open.kattis.com/users/trace-davis?tab=problems">Kattis</a> |
+          <a href="https://leetcode.com/u/tracedavis/">LeetCode</a>
+        </p>
+
+        <!-- Copyright -->
+        <p>&copy; <span id="year"></span> Designed & Built by Trace Davis</p>
+      </div>
+
+      <!-- === JavaScript Section === -->
+      <script>
+        // Update the copyright year
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Toggle mobile menu visibility
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.site-nav');
+
+        menuToggle.addEventListener('click', () => {
+          navList.classList.toggle('active');       // Toggle visibility
+          menuToggle.classList.toggle('active');    // Animate icon
+        });
+      </script>
+    </footer>
+  </div>
+</body>
+</html>

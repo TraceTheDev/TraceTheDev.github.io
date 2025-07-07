@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Home | Trace Davis</title>
+  
+    <!-- Load base and page-specific stylesheets -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+  </head>  
+
+<body>
+  <!-- Wrapper to control full-page layout -->
+  <div class="wrapper">
+
+    <!-- === Header Section === -->
+    <header class="site-header">
+      <div class="header-container">
+
+        <!-- Logo (clickable, returns to homepage) -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="../resources/NewTLogo.png" alt="Logo">
+          </a>
+        </div>
+
+        <!-- Navigation menu with hamburger for mobile -->
+        <nav class="navbar">
+
+          <!-- Hamburger icon shown on mobile -->
+          <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+
+          <!-- Main navigation links -->
+          <ul class="site-nav">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- === Hero/Main Section === -->
+    <main>
+      <section class="home-hero">
+        <div class="home-content">
+          <h2>Hey, I'm Trace Davis!</h2>
+          <p>
+            I’m a software developer with a passion for building clean, 
+            user-focused applications that blend thoughtful design with 
+            robust engineering.
+          </p>
+
+          <!-- Call-to-action button -->
+          <a href="projects.html" class="btn">Explore My Projects</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- === Footer Section === -->
+    <footer class="site-footer">
+      <p>
+        <!-- Contact and social media links -->
+        <a href="mailto:trace.davis27@gmail.com">Email</a> |
+          <a href="https://www.linkedin.com/in/trace-d-926380138/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+          <a href="https://github.com/TraceTheDev" target="_blank" rel="noopener noreferrer">GitHub</a> |
+          <a href="https://open.kattis.com/users/trace-davis?tab=problems">Kattis</a> |
+          <a href="https://leetcode.com/u/tracedavis/">LeetCode</a>
+      </p>
+
+      <!-- Dynamic copyright -->
+      <p>&copy; <span id="year"></span> Designed & Built by Trace Davis</p>
+    </footer>
+
+    <!-- === JavaScript Section === -->
+    <script>
+      // Automatically update the copyright year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile hamburger menu toggle
+      const menuToggle = document.getElementById('mobile-menu');
+      const navList = document.querySelector('.site-nav');
+
+      menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');       // Toggle visibility
+        menuToggle.classList.toggle('active');    // Animate icon
+      });
+    </script>
+
+  </div>
+</body>
+</html>

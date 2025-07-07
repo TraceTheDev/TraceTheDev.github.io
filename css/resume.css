@@ -1,0 +1,10 @@
+/* ===== RESUME EMBED STYLES ===== */
+  .alt-contact a {
+    color: #00c9da;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .alt-contact a:hover {
+    color: #00ebff;
+  }  

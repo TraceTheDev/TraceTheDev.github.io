@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Resume | Trace Davis</title>
+  
+    <!-- Load base and page-specific stylesheets -->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/resume.css">
+  </head>  
+
+<body>
+  <div class="wrapper">
+    <!-- === Header Section === -->
+    <header class="site-header">
+      <div class="header-container">
+        <!-- Clickable logo that links to homepage -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="../resources/NewTLogo.png" alt="Logo" />
+          </a>
+        </div>
+
+        <!-- Navigation menu with hamburger for mobile -->
+        <nav class="navbar">
+          <!-- Mobile hamburger icon -->
+          <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+
+          <!-- Site navigation links -->
+          <ul class="site-nav">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html" class="active">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- === Main Resume Content === -->
+    <main>
+      <div class="page-container">
+      <h2>Resume</h2>
+      <embed src="../resources/Resume.pdf" type="application/pdf" width="100%" height="700px" />
+
+      <!-- Optional download link -->
+      <p class="alt-contact">
+        If viewer is not loading,
+        <a href="../resources/Resume.pdf" download>click here to download resume</a>.
+      </p>
+    </div>
+    </main>
+
+    <!-- === Footer Section === -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <!-- Contact/social links -->
+        <p>
+          <a href="mailto:trace.davis27@gmail.com">Email</a> |
+          <a href="https://www.linkedin.com/in/trace-d-926380138/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+          <a href="https://github.com/TraceTheDev" target="_blank" rel="noopener noreferrer">GitHub</a> |
+          <a href="https://open.kattis.com/users/trace-davis?tab=problems">Kattis</a> |
+          <a href="https://leetcode.com/u/tracedavis/">LeetCode</a>
+        </p>
+
+        <!-- Copyright -->
+        <p>&copy; <span id="year"></span> Designed & Built by Trace Davis</p>
+      </div>
+
+      <!-- === JavaScript Section === -->
+      <script>
+        // Update copyright year
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Hamburger menu toggle
+        const menuToggle = document.getElementById("mobile-menu");
+        const navList = document.querySelector(".site-nav");
+
+        menuToggle.addEventListener("click", () => {
+          navList.classList.toggle("active");
+          menuToggle.classList.toggle("active");
+        });
+      </script>
+    </footer>
+  </div>
+</body>
+</html>

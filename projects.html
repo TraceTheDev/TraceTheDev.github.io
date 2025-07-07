@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects | Trace Davis</title>
+
+  <!-- Load base and page-specific stylesheets -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/projects.css">
+</head>
+
+<body>
+  <!-- === Header Section === -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="../resources/NewTLogo.png" alt="Logo">
+        </a>
+      </div>
+
+      <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="site-nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- === Main Content === -->
+  <main>
+    <div class="page-container">
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Spark-Cards</h3>
+          <p>Java GUI flashcard app completed using the software development lifecycle.</p>
+          <div class="button-wrapper">
+            <a href="https://github.com/TraceTheDev/Spark-Cards" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>NQueensGeneticAlgorithm</h3>
+          <p>Java-based genetic algorithm to solve N-Queens problem.</p>
+          <div class="button-wrapper">
+            <a href="https://github.com/Trace0727/NQueensGeneticAlgorithm" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>RRT_Implementation</h3>
+          <p>Java GUI app that visualizes my implementation of the RRT algorithm.</p>
+          <div class="button-wrapper">
+            <a href="https://github.com/Trace0727/RRT_Implementation" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>LittleLanguageCompiler</h3>
+          <p>“Little” compiler using ANTLR to handle lexical analysis, parsing, and code generation.</p>
+          <div class="button-wrapper">
+            <a href="https://github.com/Trace0727/LittleLanguageCompiler" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>SIC-XE-Assembler</h3>
+          <p>Second pass of SIC/XE assembler using C to convert to machine-readable object code.</p>
+          <div class="button-wrapper">
+            <a href="https://github.com/Trace0727/SIC-XE-Assembler" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>StoreFrontDB</h3>
+          <p>Java GUI using MySQL for user login, inventory management, and order processing.</p>
+          <div class="button-wrapper">
+            <a href="https://github.com/Trace0727/StoreFrontDB" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>DietarySurvey</h3>
+          <p>Java GUI app collecting personal and dietary info from users, saving to CSV file.</p>
+          <div class="button-wrapper">
+            <a href="https://github.com/Trace0727/DietarySurvey" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>SpeedDataAnalyzer</h3>
+          <p>Java program computing CSV traffic sensor data, and outputs to formatted CSV to analyze.</p>
+          <div class="button-wrapper">
+            <a href="https://github.com/Trace0727/SpeedDataAnalyzer" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="alt-contact">
+        These are selected highlights. You can find more of my work through the GitHub link below.
+      </p>
+    </div>
+  </main>
+
+  <!-- === Footer Section === -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>
+        <a href="mailto:trace.davis27@gmail.com">Email</a> |
+          <a href="https://www.linkedin.com/in/trace-d-926380138/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+          <a href="https://github.com/Trace0727" target="_blank" rel="noopener noreferrer">GitHub</a> |
+          <a href="https://open.kattis.com/users/trace-davis?tab=problems">Kattis</a> |
+          <a href="https://leetcode.com/u/tracedavis/">LeetCode</a>
+      </p>
+      <p>&copy; <span id="year"></span> Designed & Built by Trace Davis</p>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const menuToggle = document.getElementById('mobile-menu');
+      const navList = document.querySelector('.site-nav');
+      menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+      });
+    </script>
+  </footer>
+</body>
+</html>
